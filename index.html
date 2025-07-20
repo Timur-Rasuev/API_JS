@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.root {
+				padding-bottom: 20px; /* чтобы последнему было куда дышать */
+			}
+
+			.qwe {
+				background-color: silver;
+				border: 1px solid black;
+				width: 300px;
+				cursor: pointer;
+				padding: 5px;
+				margin-bottom: 5px;
+			}
+			.qwe:hover {
+				background-color: #65cdf9;
+			}
+			.children {
+				position: relative;
+				background-color: #e27beb;
+				width: 300px;
+				height: 80px;
+				padding: 5px 10px;
+				box-sizing: border-box;
+			}
+
+			.children::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 3px;
+				width: 100%;
+				background: black;
+			}
+
+			.children p {
+				margin: 2px 0;
+			}
+
+			.closeBtn {
+				color: red;
+				font-size: 35px;
+				position: relative;
+				bottom: 50px;
+				text-align: right;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" />
+		<button class="btn">Click</button>
+		<div class="root"></div>
+		<script src="script.js"></script>
+	</body>
+</html>
